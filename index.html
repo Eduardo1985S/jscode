@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Praticar JavaScript</title>
-    <link rel="stylesheet" href="/src/styles.css">
+    <title>Praticar JavaScript com Vite</title>
+    <link rel="stylesheet" href="./src/styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Praticando Javascript</h1>
-        <div class="editor-container">
-            <textarea id="codeEditor" placeholder="Escreva seu código JavaScript aqui... Use prompt() para entrada de usuário."></textarea>
-            <pre id="highlightOverlay" class="highlight-overlay"></pre>
+        <h1>Pratique JavaScript com Vite</h1>
+        <textarea id="codeEditor" placeholder="Escreva seu código JavaScript aqui... Use prompt() para entrada de usuário."></textarea>
+        <div class="button-container">
+            <button id="runButton">Executar Código</button>
+            <button id="clearButton">Limpar Console</button>
         </div>
-        <button id="runButton">Executar Código</button>
         <div id="console">Console: Digite seu código e clique em "Executar Código" para ver o resultado aqui.</div>
     </div>
     <script type="module" src="./src/main.jsx"></script>

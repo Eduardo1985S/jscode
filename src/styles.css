@@ -1,101 +1,71 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #282a36; /* Dracula Background */
-    color: #f8f8f2; /* Dracula Foreground */
+    background-color: #f0f0f0;
 }
-
 .container {
     max-width: 800px;
     margin: 0 auto;
 }
-
 h1 {
-    color: #f8f8f2; /* Dracula Foreground */
+    color: #333;
     text-align: center;
 }
-
-.editor-container {
-    position: relative;
+#codeEditor {
     width: 100%;
-    min-height: 200px; /* Altura mínima para evitar colapso */
-}
-
-#codeEditor, .highlight-overlay {
-    /* Propriedades compartilhadas para alinhamento perfeito */
-    width: 100%;
-    min-height: 200px; /* Mesma altura inicial */
+    height: 200px;
     padding: 10px;
-    margin: 0; /* Remove margens indesejadas */
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
-    line-height: 1.5; /* Consistência no espaçamento das linhas */
-    border: 1px solid #44475a; /* Dracula Current Line */
+    border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* Inclui padding e borda no tamanho */
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-#codeEditor {
-    background-color: transparent;
-    color: transparent; /* Texto invisível, visível via overlay */
-    caret-color: #f8f8f2; /* Cor do cursor */
-    z-index: 2; /* Acima do overlay */
     resize: vertical;
-    tab-size: 2;
+    background-color: #fff;
+    margin-bottom: 70px; /* Espaço para os botões fixos */
 }
-
-#codeEditor:focus {
-    outline: none;
-    border-color: #bd93f9; /* Dracula Purple */
+.button-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 1000; /* Garante que os botões fiquem acima de outros elementos */
 }
-
-.highlight-overlay {
-    background-color: #282a36; /* Dracula Background */
-    color: #f8f8f2; /* Dracula Foreground */
-    z-index: 1; /* Abaixo do textarea */
-    pointer-events: none; /* Não interfere com o textarea */
-    white-space: pre-wrap; /* Mantém formatação */
-    overflow: hidden; /* Evita barras de rolagem extras */
-}
-
-.keyword {
-    color: #bd93f9; /* Dracula Purple para palavras-chave */
-}
-
-#runButton {
-    margin-top: 10px;
+#runButton, #clearButton {
     padding: 10px 20px;
-    background-color: #50fa7b; /* Dracula Green */
-    color: #282a36; /* Dracula Background como contraste */
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    color: white;
 }
-
+#runButton {
+    background-color: #4CAF50;
+}
 #runButton:hover {
-    background-color: #45d96f; /* Tom mais escuro do verde */
+    background-color: #45a049;
 }
-
+#clearButton {
+    background-color: #f44336;
+}
+#clearButton:hover {
+    background-color: #da190b;
+}
 #console {
     margin-top: 20px;
     padding: 15px;
-    border: 1px solid #44475a; /* Dracula Current Line */
+    border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: #282a36; /* Dracula Background */
-    color: #f8f8f2; /* Dracula Foreground */
+    background-color: #1e1e1e;
+    color: #fff;
     font-family: 'Courier New', Courier, monospace;
     min-height: 150px;
     white-space: pre-wrap;
     overflow-y: auto;
 }
-
 .success {
-    color: #50fa7b; /* Dracula Green */
+    color: #00ff00;
 }
-
 .error {
-    color: #ff5555; /* Dracula Red */
+    color: #ff4444;
 }
